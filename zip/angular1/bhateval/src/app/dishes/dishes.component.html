@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Menu</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: burlywood;
+        margin: 0;
+        padding: 1rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 100vh;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      h2 {
+        color: #555;
+      }
+
+      a {
+        background-color: #3498db;
+        color: #fff;
+        padding: 15px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 12px;
+        display: inline-block;
+        transition: background-color 0.3s;
+      }
+
+      a:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 100%">
+      <h2 class="headingElement">
+        <div>
+          <span class="hoverSpan">Welcome</span
+          ><span class="hoverSpan"> to</span
+          ><span class="hoverSpan"> Dennisons!</span>
+        </div>
+        <a href="/home">Logout</a>
+      </h2>
+
+      <div class="layout">
+        <div class="menuClass">
+          <h3>Today's Menu:</h3>
+          <form style="width: 80%;">
+            <label
+              *ngFor="let item of menuItems"
+              [for]="'dish' + item.id"
+              style="display: flex"
+            >
+              <input
+                type="checkbox"
+                [id]="'dish' + item.id"
+                [name]="item.name"
+                [(ngModel)]="item.selected"
+              />
+              {{ item.name }}
+            </label>
+
+            <button type="button" (click)="onSubmit()">Order Now</button>
+          </form>
+        </div>
+        <div class="billClass">
+          <div *ngIf="selectedDishes.length > 0" class="billElement">
+            <h3>Selected Dishes:</h3>
+            <ol
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+              "
+            >
+              <li *ngFor="let dish of selectedDishes">{{ dish.name }}</li>
+            </ol>
+
+            <div style="display: flex; align-items: center; gap: 5px;"><h4>Total Bill:</h4> Rs. {{ totalBill }}</div>
+            <div style="display: flex; align-items: center; gap: 5px;"><h4>Discount Applied:</h4> Rs. {{ discountApplied }}</div>
+            <div style="display: flex; align-items: center; gap: 5px;"><h4>Discounted Bill:</h4> Rs. {{ discountedBill }}</div>
+          </div>
+        </div>
+        <div class="chefClass">
+          <h3 *ngIf="chefIncentive > 0">Chefs who prepared order:</h3>
+          <ol
+            *ngIf="chefIncentive > 0"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+            "
+          >
+            <li *ngFor="let dish of selectedDishes">{{ dish.chef.name }}</li>
+          </ol>
+          <div *ngIf="chefIncentive > 0">
+            <h3>Chef Incentive: Rs. {{ chefIncentive }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

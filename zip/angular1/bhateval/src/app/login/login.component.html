@@ -1,0 +1,35 @@
+<div class="loginPage">
+  <form class="loginForm">
+    <div align="center">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        [(ngModel)]="username"
+      /><br />
+    </div>
+    <div align="center">
+      <label for="password">Password:</label>
+      <input
+        type="text"
+        id="password"
+        name="password"
+        [(ngModel)]="password"
+      /><br />
+    </div>
+    <div align="center">
+      <button (click)="onSubmit()">Login</button>
+    </div>
+    <div *ngIf="isChecked">
+      <div *ngIf="isValidate">
+        Welcome {{ username }}!!
+        <a href="/dishes">Click here to display further information</a>
+      </div>
+      <div *ngIf="!isValidate">
+        Invalid username or password. Please try again.
+        <a href="/login">Re-enter your details</a>
+      </div>
+    </div>
+  </form>
+</div>

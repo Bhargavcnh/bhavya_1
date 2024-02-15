@@ -1,0 +1,29 @@
+.loginPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: wheat;
+}
+
+.loginForm {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: solid 1px black;
+  background-color: #fff;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+    margin: 5px;
+}
+
+button {
+    background-color: #3498db;
+    padding: 10px;
+    border-radius: 10px;
+}
