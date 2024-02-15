@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  overflow-x: hidden;
+}
+.appcss{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formcss{
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(228, 222, 214);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+
+}
+.formcss p{
+  margin-bottom: 20px;
+  font-weight: 700;
+  background-color: beige;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+.formcss input{
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.formcss select{
+  margin-bottom: 10px;
+}
+.formcss button{
+  background-color: rgb(233, 68, 68);
+  border-radius: 5px;
+  padding: 10px;
+}
+.gradecss{
+  width: 300px;
+  height: auto;
+  background-color: rgb(235, 202, 160);
+  padding: 20px;
+
+}
+.gradecss p{
+  line-height: 30px;
+}
+.p1{
+  font-size: large;
+  font-weight: 700;
+  text-align: center;
+}
+.branchCss{
+  display: flex;
+  justify-content: space-between;
+}
+.grade-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+}
+
+.registered-student-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.student-details {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.detail-label {
+  font-weight: bold;
+  margin-right: 5px;
+}

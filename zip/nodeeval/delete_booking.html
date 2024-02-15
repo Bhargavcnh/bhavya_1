@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Railway Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            color: #5f5757;
+        }
+
+        h3 {
+            text-align: center;
+            color: #5f5757;
+        }
+
+        form {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #adb1b5;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <h3>User Page</h3>
+    <h2>Delete Railway Booking</h2>
+    <form action="/deleteBooking" method="POST">
+        <label for="trainName">Train Name:</label>
+        <input type="text" id="trainName" name="trainName" required>
+
+        <button type="submit">Delete Booking</button>
+    </form>
+</body>
+</html>

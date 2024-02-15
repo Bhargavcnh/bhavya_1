@@ -1,0 +1,38 @@
+<!--<ul>
+  <li>
+    <a routerLink="second">Second</a>
+  </li>
+  <li>
+    <a routerLink="third">Third</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
+-->
+
+<!--The sum of numbers is    
+<hr>
+<div align="center">
+  <input type="number" [(ngModel)]='a'>
+  <input type="number" [(ngModel)]='b'>
+  <input type="button" (click)=add() value="ADD"/>
+The sum is {{c}}
+
+
+</div>
+-->
+
+<hr>
+<div>
+  First Number <input type="number" [(ngModel)]='a'><br><br>
+  Second Number <input type="number" [(ngModel)]='b'><br><br> 
+  <ng-template [ngIf] ="a<b" [ngIfElse]="maximumblock">
+    <h1>minimum is {{a}}
+    </h1>
+
+  </ng-template>
+  <ng-template #maximumblock>
+    <h1> maximum is {{a}}</h1>
+  </ng-template>
+</div>
+<router-outlet></router-outlet>
